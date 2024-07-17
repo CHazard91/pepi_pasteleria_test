@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear Receta</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="index.html" class="nav-button">
+            <img src="img/casablanca.png" alt="" srcset="">
+        </a>
+        <a href="recetas.html" class="nav-button">
+          <img src="img/boton-circular-plus.png" class="plus" alt="" srcset="">  recetas
+        </a>
+        <a href="productos.html" class="nav-button">
+          <img src="img/boton-circular-plus.png" class="plus" alt="" srcset="">  productos
+        </a>
+    </div>
+
+
+  <div class="content">
+    <h2>Nombre de nueva receta</h2>
+    <form id="recetaForm">
+      <input type="text" id="nombreReceta" name="nombreReceta" placeholder="Ingrese el nombre" required>
+      <div id="productosContainer"></div>
+      <button type="submit" class="fixed-button">Crear Receta</button>
+    </form>
+    <div id="message" style="display:none;"></div>
+  </div>
+
+  <script src="script_recetas.js"></script>
+</body>
+</html>
