@@ -1,18 +1,17 @@
 const express = require('express');
 const path = require('path');
+const app = express();
+const port = process.env.PORT || 3000;
 const db = require('./config/db');
 const bodyParser = require('body-parser');
 
-const app = express();
-const port = 3000;
-
 // Conectar a la base de datos
-db.connect((err) => {
-  if (err) {
-    console.error('Error connecting to the database:', err);
-    return;
-  }
-  console.log('Database connected successfully');
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+app.listen(port, () => {
+  console.log(`App listening at http://localhost:${port}`);
 });
 
 // Configurar body-parser para manejar datos POST
